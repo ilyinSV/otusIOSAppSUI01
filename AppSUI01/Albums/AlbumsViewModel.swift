@@ -13,4 +13,5 @@ final class AlbumsViewModel: ObservableObject {
     @Published var albums = ["Summer 2021",
                              "Vacation 2021",
                              "Xmas 2021"]
+    @Published var selectedAlbum: String? = "Xmas 2021"
 }

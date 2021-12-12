@@ -9,11 +9,13 @@ import SwiftUI
 
 struct LybraryScreen: View {
     
+    @EnvironmentObject var albumsViewModel: AlbumsViewModel
     @Binding var selection: Int
     
         var body: some View {
             Button(action: {
                 selection = 1
+                albumsViewModel.selectedAlbum = albumsViewModel.albums.first
             }) {
                 Text("Open the albums")
             }

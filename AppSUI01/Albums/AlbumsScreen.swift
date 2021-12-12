@@ -27,6 +27,8 @@ struct AlbumList: View {
         List {
             ForEach(albumsViewModel.albums, id: \.self) { album in
                 NavigationLink(destination: AlbumContentScreen(albumName: album),
+                               tag: album,
+                               selection: $albumsViewModel.selectedAlbum,
                                label: {
                     Text(album)
                 })
